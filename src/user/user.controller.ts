@@ -16,6 +16,7 @@ import { ExpressRequest } from '../middleware/auth.middleware';
 import { Response } from 'express';
 import {
   ApiBearerAuth,
+  ApiBody,
   ApiOperation,
   ApiResponse,
   ApiTags,
@@ -125,6 +126,15 @@ export class UserController {
 
   @Post('users/refresh-token')
   @ApiOperation({ summary: 'Refresh access token' })
+  @ApiBody({
+    schema: {
+      type: 'object',
+      properties: {
+        refreshToken: { type: 'string' },
+      },
+      required: ['refreshToken'],
+    },
+  })
   @ApiResponse({
     status: 200,
     description: 'Token refreshed successfully',

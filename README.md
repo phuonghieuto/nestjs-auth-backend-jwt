@@ -26,6 +26,9 @@ Create a `.env` file and write it as follows
     MONGODB_URI='your-mongodb-uri'
     JWT_SECRET='jwt-secret'
     JWT_EXPIRATION='1h'
+    JWT_REFRESH_SECRET='jwt-refresh-secret'
+    JWT_REFRESH_EXPIRATION='7d'
+
  
 ----------
 
