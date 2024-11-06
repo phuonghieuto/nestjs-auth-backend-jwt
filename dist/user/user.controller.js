@@ -172,6 +172,15 @@ __decorate([
 __decorate([
     (0, common_1.Post)('users/refresh-token'),
     (0, swagger_1.ApiOperation)({ summary: 'Refresh access token' }),
+    (0, swagger_1.ApiBody)({
+        schema: {
+            type: 'object',
+            properties: {
+                refreshToken: { type: 'string' },
+            },
+            required: ['refreshToken'],
+        },
+    }),
     (0, swagger_1.ApiResponse)({
         status: 200,
         description: 'Token refreshed successfully',
@@ -201,12 +210,12 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "refreshToken", null);
 __decorate([
-    (0, common_1.Get)('user'),
+    (0, common_1.Get)('profile'),
     (0, swagger_1.ApiBearerAuth)(),
-    (0, swagger_1.ApiOperation)({ summary: 'Get current user' }),
+    (0, swagger_1.ApiOperation)({ summary: 'Get current user\'s information' }),
     (0, swagger_1.ApiResponse)({
         status: 200,
-        description: 'Current user fetched successfully',
+        description: 'Current user\'s information fetched successfully',
         type: user_response_dto_1.UserResponseDto,
         headers: {
             Authorization: {

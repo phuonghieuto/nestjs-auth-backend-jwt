@@ -168,12 +168,12 @@ export class UserController {
     }
   }
 
-  @Get('user')
+  @Get('profile')
   @ApiBearerAuth()
-  @ApiOperation({ summary: 'Get current user' })
+  @ApiOperation({ summary: 'Get current user\'s information' })
   @ApiResponse({
     status: 200,
-    description: 'Current user fetched successfully',
+    description: 'Current user\'s information fetched successfully',
     type: UserResponseDto,
     headers: {
       Authorization: {

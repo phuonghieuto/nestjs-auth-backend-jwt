@@ -10,9 +10,9 @@ async function bootstrap() {
     app.enableCors({
         origin: [
             'http://localhost:3000',
-            'https://nextjs-auth-frontend-git-main-to-phng-hius-projects.vercel.app',
-            'https://nextjs-auth-frontend.vercel.app',
-            'https://nextjs-auth-frontend-boflcxntc-to-phng-hius-projects.vercel.app'
+            'https://nextjs-auth-frontend-jwt.vercel.app',
+            'https://nextjs-auth-frontend-jwt-git-main-to-phng-hius-projects.vercel.app',
+            'https://nextjs-auth-frontend-2muhbianb-to-phng-hius-projects.vercel.app'
         ],
         allowedHeaders: '*',
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
